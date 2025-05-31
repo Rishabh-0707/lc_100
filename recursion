@@ -36,3 +36,23 @@ void printSubsequences(vector<int>& arr, int index, vector<int>& current) {
         return;
     }
 
+    // Include the current element
+    current.push_back(arr[index]);
+    printSubsequences(arr, index + 1, current);
+
+    // Exclude the current element (backtrack)
+    current.pop_back();
+    printSubsequences(arr, index + 1, current);
+}
+
+int main() {
+    vector<int> arr = {1, 2, 3};
+    vector<int> current;
+    
+    cout << "All subsequences:" << endl;
+    printSubsequences(arr, 0, current);
+
+    return 0;
+}
+
+
