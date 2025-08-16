@@ -1,3 +1,3 @@
 # lc_100
 
-posting questions on dsa
+posting questions on dsa.
